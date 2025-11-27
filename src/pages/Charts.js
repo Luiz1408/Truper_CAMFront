@@ -16,7 +16,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { useUserManagement } from '../contexts/UserManagementContext';
 import api from '../services/api';
 import { parseDateValue } from '../utils/date';
-import './Dashboard.css';
+import './Charts.css';
 import MainNavbar from '../components/Layout/MainNavbar';
 import Footer from '../components/Layout/Footer';
 

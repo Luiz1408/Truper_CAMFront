@@ -1,0 +1,191 @@
+/* Modal Moderno - Basado en diseño de Soporte */
+.modern-modal-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 99999 !important;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.modern-modal {
+  background-color: white !important;
+  border-radius: 12px !important;
+  max-width: 700px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+  transform: scale(1);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modern-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 30px 20px 30px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modern-modal__title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.modern-modal__close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.modern-modal__close:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.modern-modal__close:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.modern-modal__body {
+  padding: 20px 30px;
+}
+
+.modern-modal__footer {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  padding: 20px 30px 30px 30px;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Formularios dentro del modal */
+.modern-form-group {
+  margin-bottom: 15px;
+}
+
+.modern-form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.modern-form-input,
+.modern-form-select,
+.modern-form-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  background-color: white;
+}
+
+.modern-form-input:focus,
+.modern-form-select:focus,
+.modern-form-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.modern-form-textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.modern-form-input:disabled,
+.modern-form-select:disabled,
+.modern-form-textarea:disabled {
+  background-color: #f9fafb;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+/* Grid layouts para formularios */
+.modern-form-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.modern-form-grid--2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.modern-form-grid--3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modern-modal-overlay {
+    padding: 10px !important;
+  }
+  
+  .modern-modal {
+    width: 95% !important;
+    margin: 0 !important;
+    max-width: none !important;
+  }
+  
+  .modern-modal__header {
+    padding: 20px 20px 15px 20px;
+  }
+  
+  .modern-modal__body {
+    padding: 15px 20px;
+  }
+  
+  .modern-modal__footer {
+    padding: 15px 20px 20px 20px;
+    flex-direction: column;
+  }
+  
+  .modern-form-grid--2,
+  .modern-form-grid--3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .modern-modal__title {
+    font-size: 1.25rem;
+  }
+}
+
+/* Asegurar que el modal esté por encima de todo */
+.modern-modal-overlay * {
+  box-sizing: border-box;
+}
+
+/* Prevenir conflicts con otros modales */
+.planeacion-modal,
+.turno-modal {
+  display: none !important;
+}

@@ -7,6 +7,7 @@ const NAV_LINKS = [
   { key: 'revisiones-entregadas', to: '/revisiones-entregadas', label: 'Revisiones entregadas' },
   { key: 'entrega-turno', to: '/entrega-turno', label: 'Entrega de turno' },
   { key: 'planeacion-tecnica', to: '/planeacion-tecnica', label: 'Planeación técnica' },
+  { key: 'cronograma-soporte', to: '/cronograma-soporte', label: 'Cronograma soporte' },
   { key: 'charts', to: '/charts', label: 'Ver gráficas' },
 ];
 

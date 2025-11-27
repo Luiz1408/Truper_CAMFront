@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import Footer from '../components/Layout/Footer';
+import './Login.css';
 
 const Login = () => {
   const [username, setUsername] = useState('');

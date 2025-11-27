@@ -6,7 +6,7 @@ import MainNavbar from '../components/Layout/MainNavbar';
 import Footer from '../components/Layout/Footer';
 import useDashboardFilters from '../hooks/useDashboardFilters';
 import { useToast } from '../contexts/ToastContext';
-import './Dashboard.css';
+import './RevisionesEntregadas.css';
 
 const normalizeHeaderKey = (rawKey) =>
   (rawKey ?? '')

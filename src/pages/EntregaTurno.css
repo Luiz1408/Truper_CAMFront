@@ -1,0 +1,502 @@
+/* Estilos modernos para Entrega de Turno - Basados en CronogramaSoporte */
+
+:root {
+  --turno-bg: #f8fafc;
+  --turno-card-bg: #ffffff;
+  --turno-accent: #3b82f6;
+  --turno-accent-rgb: 59, 130, 246;
+  --turno-border: #e2e8f0;
+  --turno-text: #1e293b;
+  --turno-muted: #64748b;
+  --turno-success: #10b981;
+  --turno-warning: #f59e0b;
+  --turno-danger: #ef4444;
+  --turno-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --turno-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  background-color: var(--turno-bg);
+  color: var(--turno-text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Contenedor principal */
+.turno-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+.turno-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.turno-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--turno-text);
+  margin: 0;
+}
+
+.turno-subtitle {
+  color: var(--turno-muted);
+  font-size: 1rem;
+  margin: 0.5rem 0 0 0;
+}
+
+/* Tarjetas */
+.turno-card {
+  background: var(--turno-card-bg);
+  border: 1px solid var(--turno-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--turno-shadow);
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.turno-card:hover {
+  box-shadow: var(--turno-shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* Botones modernos */
+.btn-turno {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 40px;
+  gap: 0.5rem;
+}
+
+.btn-turno--primary {
+  background: var(--turno-accent);
+  color: white;
+}
+
+.btn-turno--primary:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.btn-turno--outline {
+  background: transparent;
+  color: var(--turno-accent);
+  border: 1px solid var(--turno-accent);
+}
+
+.btn-turno--outline:hover {
+  background: var(--turno-accent);
+  color: white;
+}
+
+.btn-turno--success {
+  background: var(--turno-success);
+  color: white;
+}
+
+.btn-turno--success:hover {
+  background: #059669;
+}
+
+.btn-turno--danger {
+  background: var(--turno-danger);
+  color: white;
+}
+
+.btn-turno--danger:hover {
+  background: #dc2626;
+}
+
+/* Formularios */
+.turno-form {
+  background: var(--turno-card-bg);
+  border: 1px solid var(--turno-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--turno-shadow);
+}
+
+.turno-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.turno-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.turno-form-label {
+  font-weight: 500;
+  color: var(--turno-text);
+  font-size: 0.875rem;
+}
+
+.turno-form-input,
+.turno-form-textarea,
+.turno-form-select {
+  padding: 0.625rem;
+  border: 1px solid var(--turno-border);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  background: var(--turno-card-bg);
+}
+
+.turno-form-input:focus,
+.turno-form-textarea:focus,
+.turno-form-select:focus {
+  outline: none;
+  border-color: var(--turno-accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.turno-form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.turno-note-description {
+  flex: 1;
+  min-height: 60px;
+  padding: 0.75rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--turno-text);
+  resize: vertical;
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 100%;
+}
+
+.turno-note-description:focus {
+  outline: none;
+  border-color: var(--turno-accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background-color: #ffffff;
+}
+
+/* Botón eliminar más pequeño */
+.btn-turno--danger.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  min-width: auto;
+  height: auto;
+  line-height: 1.2;
+}
+
+/* Notas y asignaciones */
+.turno-notes-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Responsive - 1 columna en móviles */
+@media (max-width: 1024px) {
+  .turno-notes-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.turno-note-card {
+  background: var(--turno-card-bg);
+  border: 1px solid var(--turno-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: var(--turno-shadow);
+  transition: all 0.3s ease;
+}
+
+.turno-note-card:hover {
+  box-shadow: var(--turno-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.turno-note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.turno-note-title {
+  font-weight: 600;
+  color: var(--turno-text);
+  margin: 0;
+  font-size: 1rem;
+}
+
+.turno-note-time {
+  color: var(--turno-muted);
+  font-size: 0.75rem;
+}
+
+.turno-note-content {
+  color: var(--turno-text);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.turno-note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--turno-muted);
+}
+
+/* Estados y badges */
+.turno-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.turno-badge--success {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--turno-success);
+}
+
+.turno-badge--warning {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--turno-warning);
+}
+
+.turno-badge--danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--turno-danger);
+}
+
+.turno-badge--info {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--turno-accent);
+}
+
+/* Grid responsivo */
+.turno-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.turno-grid--cols-1 { grid-template-columns: 1fr; }
+.turno-grid--cols-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.turno-grid--cols-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.turno-grid--cols-4 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+/* Loading */
+.turno-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  color: var(--turno-muted);
+}
+
+.turno-spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--turno-border);
+  border-top: 2px solid var(--turno-accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 0.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Empty state */
+.turno-empty {
+  text-align: center;
+  padding: 3rem;
+  color: var(--turno-muted);
+}
+
+.turno-empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.turno-empty-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--turno-text);
+}
+
+.turno-empty-description {
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Pestañas */
+.turno-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--turno-border);
+  padding-bottom: 0;
+}
+
+.turno-tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: transparent;
+  color: var(--turno-muted);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+}
+
+.turno-tab:hover {
+  color: var(--turno-accent);
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.turno-tab--active {
+  color: var(--turno-accent);
+  border-bottom-color: var(--turno-accent);
+  background: rgba(59, 130, 246, 0.1);
+}
+
+/* Tarjetas de tareas por estatus */
+.turno-note-card.programado {
+  border-left: 4px solid var(--turno-accent);
+}
+
+.turno-note-card.pendiente {
+  border-left: 4px solid var(--turno-warning);
+}
+
+.turno-note-card.en-proceso {
+  border-left: 4px solid #06b6d4;
+}
+
+.turno-note-card.completado {
+  border-left: 4px solid var(--turno-success);
+  opacity: 0.8;
+}
+
+.turno-note-card.cancelado {
+  border-left: 4px solid var(--turno-danger);
+  opacity: 0.7;
+}
+
+/* Acknowledgments section */
+.turno-acknowledgments {
+  border-top: 1px solid var(--turno-border);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.turno-acknowledgments-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--turno-text);
+  margin-bottom: 0.75rem;
+}
+
+.turno-acknowledgments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.turno-acknowledgment-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background-color: #f8fafc;
+  transition: background-color 0.2s ease;
+}
+
+.turno-acknowledgment-item:hover {
+  background-color: #f1f5f9;
+}
+
+.turno-acknowledgment-checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--turno-accent);
+}
+
+.turno-acknowledgment-checkbox:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.turno-acknowledgment-label {
+  flex: 1;
+  font-size: 0.875rem;
+  color: var(--turno-text);
+  cursor: pointer;
+  user-select: none;
+}
+
+.turno-acknowledgment-label:has(+ .turno-acknowledgment-checkbox:disabled) {
+  cursor: default;
+}
+
+.turno-acknowledgment-time {
+  font-size: 0.75rem;
+  color: var(--turno-muted);
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .turno-container {
+    padding: 1rem;
+  }
+  
+  .turno-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .turno-form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .turno-notes-container {
+    grid-template-columns: 1fr;
+  }
+}
